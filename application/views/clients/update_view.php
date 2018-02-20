@@ -29,7 +29,7 @@ foreach ($client_id as $value){
         <?php echo form_input($data); ?>
     </div>
 
-    <!--input voor username-->
+    <!--input voor Firstname-->
     <div class="form-group">
         <?php echo form_label('Firstname'); ?>
         <?php
@@ -43,7 +43,7 @@ foreach ($client_id as $value){
         <?php echo form_input($data); ?>
     </div>
 
-    <!--input voor password-->
+    <!--input voor Lastname-->
     <div class="form-group">
         <?php echo form_label('Lastname'); ?>
         <?php

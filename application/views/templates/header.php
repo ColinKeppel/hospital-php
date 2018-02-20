@@ -9,4 +9,18 @@
     <title></title>
 </head>
 <body>
-
+<div class="container">
+    <nav>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="<?php echo base_url("home/index") ?>">Clients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url("species/index") ?>">Spieces</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </nav>
+</div>

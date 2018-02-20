@@ -1,5 +1,6 @@
 <div class="container">
     <h1 class="mx-auto">Here are all the clients</h1>
+    <a href="<?php echo base_url("species/index") ?>">species</a>
     <?php foreach ($metadata as $value): ?>
     <table class="table">
         <thead>

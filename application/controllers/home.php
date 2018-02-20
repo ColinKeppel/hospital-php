@@ -10,7 +10,7 @@ class Home extends CI_Controller {
         $this->load->model('user_model');
         $data['metadata'] = $this->user_model->show();
 //      var_dump($data); //laat de data zien die hij ophaalt. Het is een array in een array en in die array zitten de clien names
-        $this->load->view('home_view', $data);
+        $this->load->view('clients/home_view', $data);
         $this->load->view('templates/footer');
     }
 
@@ -40,7 +40,7 @@ class Home extends CI_Controller {
             }
         }
         // Loading view
-        $this->load->view('create_view');
+        $this->load->view('clients/create_view');
         $this->load->view('templates/header');
         $this->load->view('templates/footer');
     }
@@ -51,7 +51,7 @@ class Home extends CI_Controller {
         $id = $this->uri->segment(3);
         $data['clients'] = $this->user_model->show();
         $data['client_id'] = $this->user_model->show_id($id);
-        $this->load->view('update_view', $data);
+        $this->load->view('clients/update_view', $data);
         $this->load->view('templates/footer');
     }
 
