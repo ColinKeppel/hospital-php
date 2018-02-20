@@ -10,7 +10,6 @@ class species extends CI_Controller
     public function index()
     {
         $this->load->view('templates/header');
-
         $data['metadata'] = $this->species_model->show();
         $this->load->view('species/species_view', $data);
         $this->load->view('templates/footer');

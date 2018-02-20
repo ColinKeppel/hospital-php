@@ -10,6 +10,7 @@
 </head>
 <body>
 <div class="container">
+    <h1>Hospital</h1>
     <nav>
         <ul class="nav">
             <li class="nav-item">
@@ -19,7 +20,7 @@
                 <a class="nav-link" href="<?php echo base_url("species/index") ?>">Spieces</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href=<?php echo base_url("patients/index") ?>>Patients</a>
             </li>
         </ul>
     </nav>
