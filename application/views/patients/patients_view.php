@@ -14,7 +14,7 @@
         </tbody>
         <tr>
             <td><?php echo $value['patient_name'] ?></td>
-            <td><?php echo $value['species_id'] ?></td>
+            <td><?php echo $value['species_name'] ?></td>
             <td><?php echo $value['patient_status'] ?></td>
             <td><?php echo $value['client_id'] ?></td>
             <td class="center"><a href="<?php echo base_url("patients/edit_patients/".$value['patient_id'])?>">edit</a></td>

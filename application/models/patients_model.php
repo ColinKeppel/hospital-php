@@ -4,6 +4,20 @@ class patients_model extends CI_Model
 {
     function show()
     {
+        $this->load->model('species_model');
+        $query1 = $this->species_model->show();
+        $species = [];
+        foreach ($query1 as $data){
+            $species[$data['id']] = $data['description'];
+        }
+//        $this->load->model('species_model');
+//        $query2 = $this->patients_model->show();
+//        $client = [];
+//        foreach ($query2 as $data){
+//            $client[$data['id']] = $data['firstname'];
+//        }
+
+
         $siteData = array();
         $this->db->from('patients');
         $this->db->select("patient_id, patient_name, species_id, client_id, patient_status ");
@@ -14,7 +28,9 @@ class patients_model extends CI_Model
                     'patient_id' => $row['patient_id'],
                     'patient_name' => $row['patient_name'],
                     'species_id' => $row['species_id'],
+                    'species_name' => $species[$row['species_id']],
                     'client_id' => $row['client_id'],
+//                    'client_name' => $client[$row['client_id']],
                     'patient_status' => $row['patient_status']
                 ];
             }

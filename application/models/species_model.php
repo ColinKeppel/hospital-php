@@ -5,19 +5,19 @@ class species_model extends CI_Model
 
     function show()
     {
-        $siteData = array();
+        $speciesData = array();
         $this->db->from('species');
         $this->db->select("species_description, species_id");
         $query = $this->db->get();
         if ($query->num_rows()) {
             foreach ($query->result_array() as $row) {
-                $siteData[] = [
+                $speciesData[] = [
                     'description' => $row['species_description'],
                     'id' => $row['species_id']
                 ];
             }
         }
-        return $siteData;
+        return $speciesData;
     }
 
     public function insert($data)
