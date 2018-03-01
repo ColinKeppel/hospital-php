@@ -11,6 +11,8 @@ class patients extends CI_Controller{
     {
         $this->load->view('templates/header');
         $data['metadata'] = $this->patients_model->show();
+        $this->load->model('species_model');
+        $data['species'] = $this->species_model->show();
         $this->load->view('patients/patients_view', $data);
         $this->load->view('templates/footer');
     }
