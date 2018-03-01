@@ -48,6 +48,8 @@ class patients extends CI_Controller{
 
     }
 
+
+
     public function delete_patients($patient_id)
     {
         $this->load->model("patients_model");
