@@ -66,20 +66,31 @@
         <?php echo form_textarea($data); ?>
     </div>
 
-<!---->
-<!--            <h5>Gender</h5>-->
-<!--                <div class="form-check">-->
-<!--                    --><?php //echo form_label(); ?>
-<!--                    --><?php
-//                    $data = array(
-//                        //            'class' => 'form-check-input',
-//                        'type' => 'radio',
-//                        'name' => 'gender',
-//                        'value' =>
-//                    );
-//                    ?>
-<!--                    --><?php //echo form_radio($data); ?>
-<!--                </div>-->
+
+            <h5>Gender</h5>
+                <div class="form-check">
+                    <?php echo form_label('male'); ?>
+                    <?php
+                    $data = array(
+                        //            'class' => 'form-check-input',
+                        'type' => 'radio',
+                        'name' => 'gender',
+                        'value' => 'm'
+                    );
+                    ?>
+                    <?php echo form_radio($data); ?>
+                </div>                <div class="form-check">
+                    <?php echo form_label('female'); ?>
+                    <?php
+                    $data = array(
+                        //            'class' => 'form-check-input',
+                        'type' => 'radio',
+                        'name' => 'gender',
+                        'value' => 'f'
+                    );
+                    ?>
+                    <?php echo form_radio($data); ?>
+                </div>
 
     <div class="form-group">
         <?php

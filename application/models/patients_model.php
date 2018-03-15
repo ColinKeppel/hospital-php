@@ -16,10 +16,13 @@ class patients_model extends CI_Model
         foreach ($query2 as $data){
             $client[$data['id']] = $data['firstname'];
         }
+        $url = $this->uri->segment(3);
+        $order = $this->uri->segment(4);
 
         $siteData = array();
         $this->db->from('patients');
-        $this->db->select("patient_id, patient_name, species_id, client_id, patient_status ");
+        $this->db->select("patient_id, patient_name, species_id, client_id, patient_status, gender ");
+        $this->db->order_by($url, $order);
         $query = $this->db->get();
         if ($query->num_rows()) {
             foreach ($query->result_array() as $row) {
@@ -30,7 +33,8 @@ class patients_model extends CI_Model
                     'species_name' => $species[$row['species_id']],
                     'client_id' => $row['client_id'],
                     'client_name' => $client[$row['client_id']],
-                    'patient_status' => $row['patient_status']
+                    'patient_status' => $row['patient_status'],
+                    'gender' => $row['gender']
                 ];
             }
         }

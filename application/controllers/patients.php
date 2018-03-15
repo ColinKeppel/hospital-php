@@ -32,13 +32,15 @@ class patients extends CI_Controller{
             $species = $this->input->post('species_id');
             $client = $this->input->post('client_id');
             $status = $this->input->post('patient_status');
+            $gender = $this->input->post('gender');
             if ($patient && $species && $client && $status){
                 $this->load->model('patients_model');
                 $data = array(
                     'patient_name' => $patient,
                     'species_id' => $species,
                     'client_id' => $client,
-                    'patient_status' => $status
+                    'patient_status' => $status,
+                    'gender' => $gender
                 );
 
                 $this->patients_model->insert($data);
@@ -51,12 +53,17 @@ class patients extends CI_Controller{
     }
 
 
-
     public function delete_patients($patient_id)
     {
         $this->load->model("patients_model");
         $this->patients_model->delete($patient_id);
         redirect('patients/index');
+
+    }
+
+    public function edit_patients($patient_id)
+    {
+
     }
 
 
