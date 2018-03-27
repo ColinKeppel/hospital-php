@@ -21,7 +21,7 @@ class patients_model extends CI_Model
 
         $siteData = array();
         $this->db->from('patients');
-        $this->db->select("patient_id, patient_name, species_id, client_id, patient_status, gender ");
+        $this->db->select("patient_id, patient_name, species_id, client_id, patient_status, gender");
         $this->db->order_by($url, $order);
         $query = $this->db->get();
         if ($query->num_rows()) {
@@ -56,16 +56,16 @@ class patients_model extends CI_Model
     public function show_id($data)
     {
         $this->db->select('*');
-        $this->db->from('species');
-        $this->db->where('species_id', $data);
+        $this->db->from('patients');
+        $this->db->where('patient_id', $data);
         $query = $this->db->get();
         $result = $query->result();
         return $result;
     }
 
     public function update($id,$data){
-        $this->db->where('species_id',$id);
-        $this->db->update('species', $data);
+        $this->db->where('patient_id',$id);
+        $this->db->update('patients', $data);
     }
 
 

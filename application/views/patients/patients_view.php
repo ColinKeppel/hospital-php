@@ -1,32 +1,17 @@
+
+
+
 <div class="container">
         <h2>Patiënts</h2>
 <!--    echo base_url('patients/index/patient_name/desc')-->
-    <a id="patientNaam" href="<?php test(); ?>"> naam</a>
+    <a id="patientNaam" href="<?php echo base_url('patients/index/species_id/') ?>"> naam</a>
     <a id="species" href="<?php echo base_url('patients/index/species_id') ?>">species </a>
     <a id="status" href="<?php echo base_url('patients/index/patient_status') ?>"> status</a>
     <a id="client" href="<?php echo base_url('patients/index/client_id') ?>">client </a>
 
 
-    <?php
-
-    function test(){
-
-        $i = 0;
-        if ($i < 1){
-            $i = 0;
-        } else {
-            $i++;
-        }
-        $lijst = ['patients/index/patient_name/desc', 'patients/index/patient_name/asc'];
-        $url = base_url($lijst[$i]);
-
-        return $url;
-    }
 
 
-
-
-    ?>
 <!--    <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">-->
 <!--        <option value="">Select...</option>-->
 <!--        <option value="--><?php //echo base_url('patients/index/patient_name') ?><!--">naam</option>-->
