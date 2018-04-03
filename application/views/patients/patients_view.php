@@ -4,11 +4,14 @@
 <div class="container">
         <h2>Patiënts</h2>
 <!--    echo base_url('patients/index/patient_name/desc')-->
-    <a id="patientNaam" href="<?php echo base_url('patients/index/species_id/') ?>"> naam</a>
+<!--    <a id="patientNaam" href="--><?php //echo base_url('patients/index/patient_name/') ?><!--"> naam</a>-->
+    <a id="patientNaam" href="<?php echo (current_url() == base_url('patients/index/patient_name/') ? base_url('patients/index/patient_name/desc'): base_url('patients/index/patient_name/')); ?>"> naam</a>
     <a id="species" href="<?php echo base_url('patients/index/species_id') ?>">species </a>
     <a id="status" href="<?php echo base_url('patients/index/patient_status') ?>"> status</a>
     <a id="client" href="<?php echo base_url('patients/index/client_id') ?>">client </a>
 
+
+    <?php var_dump(current_url());?>
 
 
 

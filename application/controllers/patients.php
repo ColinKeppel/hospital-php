@@ -117,7 +117,9 @@ class patients extends CI_Controller{
                 $this->patients_model->insert($data);
 
             }
-        } 
+        } else {
+
+        }
         $this->load->view('patients/patients_create', $data);
         $this->load->view('templates/footer');
 
