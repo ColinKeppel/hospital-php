@@ -16,6 +16,7 @@ class patients_model extends CI_Model
         foreach ($query2 as $data){
             $client[$data['id']] = $data['firstname'];
         }
+        //Het sorteren van de kolomen
         $url = $this->uri->segment(3);
         $order = $this->uri->segment(4);
 
