@@ -34,6 +34,7 @@
             <th scope="col">Species</th>
             <th scope="col">Status</th>
             <th scope="col">Client</th>
+            <th scope="col">Gender</th>
             <th colspan="2">Action</th>
         </tr>
         </thead>
