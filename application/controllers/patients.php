@@ -96,6 +96,8 @@ class patients extends CI_Controller{
         $data['species'] = $this->species_model->show();
         $this->load->model('user_model');
         $data['clients'] = $this->user_model->show();
+        $this->load->view('patients/patients_create', $data);
+        $this->load->view('templates/footer');
 
         if (!empty($_POST)){
             //hier
@@ -117,11 +119,12 @@ class patients extends CI_Controller{
                 $this->patients_model->insert($data);
 
             }
-        } else {
-
+            $this->session->set_flashdata('success', 'Success! Het aanmaken is gelukt.');
+            redirect('patients/index');
         }
-        $this->load->view('patients/patients_create', $data);
-        $this->load->view('templates/footer');
+
+
+
 
     }
 

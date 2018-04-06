@@ -19,6 +19,8 @@ class species extends CI_Controller
     public function create_species()
     {
         $this->load->view('templates/header');
+        $this->load->view('species/species_create');
+        $this->load->view('templates/footer');
         $this->load->model('species_model');
         if (!empty($_POST)){
             $species = $this->input->post('species_description');
@@ -30,9 +32,9 @@ class species extends CI_Controller
 
                 $id = $this->species_model->insert($data);
             }
+            redirect('species/index');
         }
-        $this->load->view('species/species_create');
-        $this->load->view('templates/footer');
+
     }
 
     public function edit_species()
