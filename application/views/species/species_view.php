@@ -1,15 +1,16 @@
 <div class="container">
 
     <h2>Species</h2>
-    <?php foreach ($metadata as $value): ?>
-    <table>
+
+    <table class="table">
         <thead>
         <tr>
-            <th>#</th>
-            <th>Description</th>
-            <th colspan="2">Action</th>
+            <th scope="col">#</th>
+            <th scope="col">Description</th>
+            <th colspan="2" scope="col">Action</th>
         </tr>
         </thead>
+        <?php foreach ($metadata as $value): ?>
         </tbody>
         <tr>
             <td><?php echo $value['id']; ?></td>
@@ -18,9 +19,10 @@
             <td class="center"><a href="<?php echo base_url("species/delete_species/".$value['id'])?>">delete</a></td>
         </tr>
         </tbody>
+        <?php endforeach; ?>
     </table>
 
-    <?php endforeach; ?>
+
 
     <p><a href="<?php echo base_url('species/create_species') ?>">Create</a></p>
 </div>

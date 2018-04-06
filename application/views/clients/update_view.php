@@ -1,6 +1,6 @@
 <?php
 
-var_dump($client_id);
+//var_dump($client_id);
 //print_r($client_id);
 
 foreach ($client_id as $value){

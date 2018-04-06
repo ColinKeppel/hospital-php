@@ -25,18 +25,5 @@
         </ul>
     </nav>
 
-<!--    <p class="alert-success">-->
-<!--        --><?php //if ($this->session->flashdata('record_succes')) {
-//            echo $this->session->flashdata('record_succes');
-//        } ?>
-<!--    </p>-->
-<!---->
-<!--    <p class="alert-danger">-->
-<!--        --><?php //if ($this->session->flashdata('record_failed')){
-//            echo $this->session->flashdata('record_failed');
-//        } ?>
-<!--    </p>-->
-
-
 
 </div>

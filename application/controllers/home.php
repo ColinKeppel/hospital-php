@@ -18,7 +18,9 @@ class Home extends CI_Controller {
 
     public function create_client()
     {
-
+        $this->load->view('templates/header');
+        $this->load->view('clients/create_view');
+        $this->load->view('templates/footer');
 //        $this->form_validation->set_rules('client_firstname', 'Firstname', 'trim|required|min_length[3]');
 //        $this->form_validation->set_rules('client_lastname', 'Lastname', 'trim|required|min_length[3]');
         if (!empty($_POST)) {
@@ -38,11 +40,10 @@ class Home extends CI_Controller {
 
                 // You can do something else here
             }
+            redirect('home/index');
         }
         // Loading view
-        $this->load->view('clients/create_view');
-        $this->load->view('templates/header');
-        $this->load->view('templates/footer');
+
     }
 
     public function edit_client()
