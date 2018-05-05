@@ -31,7 +31,7 @@
         <tr>
             <td><?php echo $value['client_firstname'] ?></td>
             <td><?php echo $value['client_lastname'] ?></td>
-            <td><a href="<?php echo base_url("clients_controller/edit_client/").$value['client_id']?>">Edit</a>|<!--<a href="<?php /*echo base_url("boek/verwijderen/").$value['client_id']*/?>">delete</a></a></td>-->
+            <td><a href="<?php echo base_url("clients_controller/edit_client/").$value['client_id']?>">Edit</a>|<a href="<?php echo base_url("clients_controller/delete/").$value['client_id']?>">Delete</a></a></td>
 
         </tr>
         </tbody>

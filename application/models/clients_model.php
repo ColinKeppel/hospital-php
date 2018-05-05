@@ -26,13 +26,13 @@
             return $dbdata;
         }
 
-        function show_clients(){
+        public function show_clients(){
             $query = $this->db->get('clients');
             $query_result = $query->result();
             return $query_result;
         }
 
-        function show_client_id($data){
+        public function show_client_id($data){
             $this->db->select('*');
             $this->db->from('clients');
             $this->db->where('client_id', $data);
@@ -40,9 +40,14 @@
             $result = $query->result_array();
             return $result;
         }
-// Update Query For Selected Student
-    function update_client_id($id,$data){
+
+        public function update_client_id($id,$data){
         $this->db->where('client_id', $id);
         $this->db->update('clients', $data);
     }
+        public function delete($id)
+        {
+            $this->db->where('client_id', $id);
+            $this->db->delete('clients');
+        }
     }

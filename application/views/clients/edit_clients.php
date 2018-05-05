@@ -11,8 +11,8 @@ foreach($id as $result):
     ?>
     <div class="container">
         <h2>Edit client:</h2>
-        <form action="<?php echo base_url('client_controller/update') ?>" method="post">
-            <input type="hidden" name="did" value="<?php echo $result['client_id']; ?>">
+        <form action="<?php echo base_url('clients_controller/update') ?>" method="post">
+            <input type="hidden" name="id" value="<?php echo $result['client_id']; ?>">
             <div class="form-group">
                 <label for="clientfirstname">Client firstname:</label>
                 <input type="text" class="form-control" name="clientfirstname" value="<?php echo $result['client_firstname']; ?>">
