@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create</title>
+    <title>Edit</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -10,7 +10,7 @@
 foreach($id as $result):
     ?>
     <div class="container">
-        <h2>Edit client:</h2>
+        <h2>Edit client</h2>
         <form action="<?php echo base_url('clients_controller/update') ?>" method="post">
             <input type="hidden" name="id" value="<?php echo $result['client_id']; ?>">
             <div class="form-group">

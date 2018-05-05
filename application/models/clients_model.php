@@ -1,5 +1,4 @@
 <?php
-
     class clients_model extends CI_Model
     {
         public function insert($data)

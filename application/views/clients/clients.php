@@ -8,9 +8,9 @@
 <body>
 <h1>Hospital</h1>
 <ul>
-    <li><a href="<?php echo base_url("patients/patients/")?>">Patiënts</a></li>
-    <li><a href="<?php echo base_url("clients/clients/")?>">Clients</a></li>
-    <li><a href="<?php echo base_url("species/species/")?>">Species</a></li>
+    <li><a href="<?php echo base_url("patients_controller/inde")?>">Patiënts</a></li>
+    <li><a href="<?php echo base_url("clients_controller/index")?>">Clients</a></li>
+    <li><a href="<?php echo base_url("species_controller/index")?>">Species</a></li>
 </ul>
 
 <h2>Patiënts</h2>
@@ -38,9 +38,9 @@
     <?php endforeach; ?>
 </table>
 </div>
-<p id="aanmaakTekst">
-    <a href="<?php echo base_url("clients_controller/create_client/") ?>">Create</a>
-</p>
+<p><a href="<?php echo base_url("clients_controller/create_client/") ?>">Create</a></p>
+<p><a href="index.html">Home</a></p>
+
 
 </body>
 </html>
