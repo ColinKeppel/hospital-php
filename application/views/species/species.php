@@ -24,18 +24,16 @@
     </thead>
     <tbody>
     <?php foreach ($dataview as $value): ?>
-
-    <tbody>
     <tr>
         <td><?php echo $value['species_id']?></td>
         <td><?php echo $value['species_description']?></td>
         <td><a href="<?php echo base_url("species_controller/edit_species/").$value['species_id']?>">Edit</a>|<a href="<?php echo base_url("species_controller/delete/").$value['species_id']?>">Delete</a></a></td>
 
     </tr>
-    </tbody>
     <?php endforeach; ?>
+    </tbody>
 </table>
 <p><a href="<?php echo base_url("species_controller/create_species/") ?>">Create</a></p>
-<p><a href="index.html">Home</a></p>
+<p><a href="<?php echo base_url("species_controller/index")?>">Home</a></p>
 </body>
 </html>

@@ -10,16 +10,27 @@
 <div class="container">
     <div class="col-sm-6">
 
-        <form action="<?php echo base_url("clients_controller/create_client/")?>" method="post">
-        <h1>Patient aanmaken</h1>
+        <form action="<?php echo base_url("patients_controller/create_patients/")?>" method="post">
+            <h1>Patient aanmaken</h1>
             <div class="form-group">
-                <label for="patientname">Patient</label>
-                <input type="text" name="pn" class="form-control" placeholder="Patient name">
+                <label for="patient_name">Patient name:</label>
+                <input type="text" name="patient_name" class="form-control" placeholder="Patient name">
             </div>
 
             <div class="form-group">
-                <label for="patientstatus">Status patient</label>
-                <input type="text" name="ps" class="form-control" placeholder="Patient status">
+                <label for="patient_status">Species description:</label>
+                <?php var_dump($patientsdata) ?>
+                <select>
+
+                <?php foreach ($patientsdata as $dieren){  ?>
+                    <option  value="<?php echo $dieren['species_id']; ?>"><?php echo $dieren['species_name']; ?></option>
+                <?php } ?>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="patientname">Patient status:</label>
+                <textarea name="patient_status" class="form-control" rows="5" id="patient_status"></textarea>
             </div>
 
             <input type="submit" class="btn btn-primary" name="submit" value="submit">

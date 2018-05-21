@@ -20,7 +20,6 @@ class species_controller extends CI_Controller
                     'species_description' => $species_description
                 );
             }
-            $this->load->model('species_model');
             $this->species_model->insert($data);
             redirect('species_controller/index');
         }
