@@ -13,7 +13,11 @@ class patients_controller extends CI_Controller
     public function create_patients()
     {
         $this->load->model('patients_model');
+        $this->load->model('species_model');
+        $this->load->model('clients_model');
         $data['patientsdata'] = $this->patients_model->read();
+        $data['speciesdata'] = $this->species_model->read();
+        $data['clientdata'] = $this->clients_model->read();
         $this->load->view('patients/create_patients', $data);
         if (!empty($_POST)) {
             $patient_name = $this->input->post('patient_name');
