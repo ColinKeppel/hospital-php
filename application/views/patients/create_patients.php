@@ -19,18 +19,25 @@
 
             <div class="form-group">
                 <label for="patient_status">Species description:</label>
-                <?php var_dump($patientsdata) ?>
-                <select>
-
-                <?php foreach ($patientsdata as $dieren){  ?>
-                    <option  value="<?php echo $dieren['species_id']; ?>"><?php echo $dieren['species_name']; ?></option>
-                <?php } ?>
+                <select name="species_id">
+                    <?php foreach ($speciesdata as $dieren){  ?>
+                        <option  value="<?php echo $dieren['species_id']; ?>"><?php echo $dieren['species_description']; ?></option>
+                    <?php } ?>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="patientname">Patient status:</label>
                 <textarea name="patient_status" class="form-control" rows="5" id="patient_status"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="client_name">Client name:</label>
+                <select name="client_id">
+                    <?php foreach ($clientdata as $personen){  ?>
+                        <option  value="<?php echo $personen['client_id']; ?>"><?php echo $personen['client_firstname']; ?></option>
+                    <?php } ?>
+                </select>
             </div>
 
             <input type="submit" class="btn btn-primary" name="submit" value="submit">

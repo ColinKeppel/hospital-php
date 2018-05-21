@@ -1,9 +1,9 @@
 <?php
 class patients_model extends CI_Model
 {
-    public function insert($data)
+    public function insert($dbdata)
     {
-        $this->db->insert('patients', $data);
+        $this->db->insert('patients', $dbdata);
     }
 
     public function read()
@@ -53,14 +53,14 @@ class patients_model extends CI_Model
     public function show_patients_id($data){
         $this->db->select('*');
         $this->db->from('patients');
-        $this->db->where('patients_id', $data);
+        $this->db->where('patient_id', $data);
         $query = $this->db->get();
         $result = $query->result_array();
         return $result;
     }
 
     public function update_patients_id($id,$data){
-        $this->db->where('patients_id', $id);
+        $this->db->where('patient_id', $id);
         $this->db->update('patients', $data);
     }
     public function delete($id)
