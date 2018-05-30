@@ -11,33 +11,27 @@
     <div class="col-sm-6">
 
         <form action="<?php echo base_url("patients_controller/create_patients/")?>" method="post">
-            <h1>Patient aanmaken</h1>
+            <h1>Create patient</h1>
             <div class="form-group">
                 <label for="patient_name">Patient name:</label>
                 <input type="text" name="patient_name" class="form-control" placeholder="Patient name">
             </div>
 
             <div class="form-group">
-                <label for="patient_status">Species description:</label>
-<<<<<<< HEAD
+                <label for="species_description">Patient description:</label>
                 <select name="species_id">
                     <?php foreach ($speciesdata as $dieren){  ?>
                         <option  value="<?php echo $dieren['species_id']; ?>"><?php echo $dieren['species_description']; ?></option>
                     <?php } ?>
-=======
-                <?php var_dump($speciesdata) ?>
-                <?php var_dump($clientdata) ?>
-                <?php var_dump($patientsdata) ?>
-                <select>
-                <?php foreach ($speciesdata as $dieren){  ?>
-                    <option  value="<?php echo $dieren['species_id']; ?>"><?php echo $dieren['species_description']; ?></option>
-                <?php } ?>
->>>>>>> bffad234532ae26740cc1d2d28bdb04c62038515
-                </select>
             </div>
 
             <div class="form-group">
-                <label for="patientname">Patient status:</label>
+                <label for="patient_status">Patient status:</label>
+                <textarea name="patient_status" class="form-control" rows="5" id="patient_status"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="patient_status">Patient status:</label>
                 <textarea name="patient_status" class="form-control" rows="5" id="patient_status"></textarea>
             </div>
 

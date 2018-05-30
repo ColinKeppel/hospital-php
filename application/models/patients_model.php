@@ -10,12 +10,10 @@ class patients_model extends CI_Model
     {
         $this->load->model('species_model');
         $species_records = $this->species_model->read();
-
         $species = [];
         foreach ($species_records as $data){
             $species[$data['species_id']] = $data['species_description'];
         }
-
         $this->load->model('clients_model');
         $client_records = $this->clients_model->read();
         $clients = [];

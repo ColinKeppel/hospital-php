@@ -52,14 +52,15 @@ class patients_controller extends CI_Controller
     }
 
     public function update() {
-        $id= $this->input->post('id');
+        $this->load->model('patients_model');
+        $patient_id = $this->input->post('id');
         $data = array(
             'patient_name' => $this->input->post('patient_name'),
             'species_id' => $this->input->post('species_id'),
             'patient_status' => $this->input->post('patient_status'),
             'client_id' => $this->input->post('client_id')
         );
-        $this->patients_model->update_patients_id($id,$data);
+        $this->patients_model->update_patients_id($patient_id,$data);
         redirect('patients_controller/index');
     }
 
