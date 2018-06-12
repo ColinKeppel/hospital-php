@@ -19,7 +19,6 @@ class patients_controller extends CI_Controller
         $data['speciesdata'] = $this->species_model->read();
         $data['clientdata'] = $this->clients_model->read();
 
-
         $this->load->view('patients/create_patients', $data);
         if (!empty($_POST)) {
             $patient_name = $this->input->post('patient_name');

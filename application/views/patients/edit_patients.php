@@ -34,7 +34,7 @@
                 <label for="client_name">Client name:</label>
                 <select name="client_id">
                     <?php foreach ($clientdata as $personen){  ?>
-                        <option <?php echo ($patient['client_id'] == $personen['client_id'] ? "selected" : ""); ?> value="<?php echo $personen['client_id']; ?>"><?php echo $personen['client_firstname']; ?></option>
+                        <option <?php echo ($patient['client_id'] == $personen['client_id'] ? "selected" : ""); ?> value="<?php echo $personen['client_id']; ?>"><?php echo $personen['client_firstname'] . " " . $personen['client_lastname'] ; ?></option>
                     <?php } ?>
                 </select>
             </div>

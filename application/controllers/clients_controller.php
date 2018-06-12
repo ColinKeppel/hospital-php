@@ -27,9 +27,8 @@ class clients_controller extends CI_Controller
             redirect('clients_controller/index');
         }
     }
-        public function edit_client() {
+        public function edit_client($id) {
             $this->load->model('clients_model');
-            $id = $this->uri->segment(3);
             $data['clients'] = $this->clients_model->show_clients();
             $data['id'] = $this->clients_model->show_client_id($id);
             $this->load->view('clients/edit_clients', $data);

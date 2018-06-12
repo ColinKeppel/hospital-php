@@ -31,13 +31,14 @@
         <td><?php echo $value['patient_name']?></td>
         <td><?php echo $value['species_name']?></td>
         <td><?php echo $value['patient_status']?></td>
-        <td><?php echo $value['client_name']?></td>
+        <td><?php echo $value['client_name'] ?></td>
         <td><?php echo $value['gender']?></td>
         <td class="center"><a href="<?php echo base_url("patients_controller/edit_patients/").$value['patient_id']?>">edit</a>|<a href="<?php echo base_url("patients_controller/delete/").$value['patient_id']?>">delete</a></td>
     </tr>
     </tbody>
     <?php endforeach; ?>
 </table>
+<?php var_dump($value); ?>
 <p><a href="<?php echo base_url("patients_controller/create_patients/") ?>">Create</a></p>
 <p><a href="<?php echo base_url("patients_controller/index")?>">Home</a></p>
 </body>

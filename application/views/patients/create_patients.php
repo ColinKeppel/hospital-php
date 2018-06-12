@@ -14,12 +14,12 @@
             <h1>Create patient</h1>
             <div class="form-group">
                 <label for="patient_name">Patient name:</label>
-                <input type="text" name="patient_name" class="form-control" placeholder="Patient name">
+                <input type="text" name="patient_name" class="form-control" placeholder="Patient name" required>
             </div>
 
             <div class="form-group">
                 <label for="species_description">Patient description:</label>
-                <select name="species_id">
+                <select name="species_id" required>
                     <?php foreach ($speciesdata as $dieren){  ?>
                         <option  value="<?php echo $dieren['species_id']; ?>"><?php echo $dieren['species_description']; ?></option>
                     <?php } ?>
@@ -27,12 +27,12 @@
 
             <div class="form-group">
                 <label for="patient_status">Patient status:</label>
-                <textarea name="patient_status" class="form-control" rows="5" id="patient_status"></textarea>
+                <textarea required name="patient_status" class="form-control" rows="5" id="patient_status"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="client_name">Client name:</label>
-                <select name="client_id">
+                <select name="client_id" required>
                     <?php foreach ($clientdata as $personen){  ?>
                         <option  value="<?php echo $personen['client_id']; ?>"><?php echo $personen['client_firstname']; ?></option>
                     <?php } ?>
@@ -42,10 +42,10 @@
             <div class="form-group">
                 <label for="gender">Gender:</label>
                         <div class="radio">
-                            <label><input type="radio" value="male" name="gender">Male:</label>
+                            <label><input required type="radio" value="male" name="gender">Male:</label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" value="female" name="gender">Female:</label>
+                            <label><input required type="radio" value="female" name="gender">Female:</label>
                         </div>
             </div>
 

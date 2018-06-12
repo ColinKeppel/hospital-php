@@ -19,7 +19,8 @@ class patients_model extends CI_Model
         $client_records = $this->clients_model->read();
         $clients = [];
         foreach ($client_records as $data){
-            $clients[$data['client_id']] = $data['client_firstname'];
+            $clients[$data['client_id']] = $data['client_firstname'] . ' ' . $data['client_lastname'] ;
+
         }
 
         $patients_records = array();

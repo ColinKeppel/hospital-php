@@ -24,9 +24,8 @@ class species_controller extends CI_Controller
             redirect('species_controller/index');
         }
     }
-    public function edit_species() {
+    public function edit_species($id) {
         $this->load->model('species_model');
-        $id = $this->uri->segment(3);
         $data['species'] = $this->species_model->show_species();
         $data['id'] = $this->species_model->show_species_id($id);
         $this->load->view('species/edit_species', $data);
