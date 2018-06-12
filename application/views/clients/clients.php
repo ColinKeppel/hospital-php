@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Hospital</title>
     <link rel="stylesheet" href="../../../style.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 <h1>Hospital</h1>
@@ -18,8 +19,6 @@
     <thead>
     <tr>
         <th>Name</th>
-        <th>Species</th>
-        <th>Status</th>
         <th>Client</th>
         <th colspan="2">Action</th>
     </tr>
@@ -43,4 +42,13 @@
 
 
 </body>
+<style>
+    body {
+        width: 1000px;
+        margin: auto;
+    }
+    th {
+        cursor: pointer;
+    }
+</style>
 </html>

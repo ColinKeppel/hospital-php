@@ -28,6 +28,7 @@ class clients_controller extends CI_Controller
         }
     }
         public function edit_client() {
+            $this->load->model('clients_model');
             $id = $this->uri->segment(3);
             $data['clients'] = $this->clients_model->show_clients();
             $data['id'] = $this->clients_model->show_client_id($id);
@@ -35,12 +36,12 @@ class clients_controller extends CI_Controller
         }
 
         public function update() {
+            $this->load->model('clients_model');
             $id= $this->input->post('id');
             $data = array(
                 'client_firstname' => $this->input->post('clientfirstname'),
                 'client_lastname' => $this->input->post('clientlastname'),
         );
-            var_dump($data);
             $this->clients_model->update_client_id($id,$data);
             redirect('clients_controller/index');
         }

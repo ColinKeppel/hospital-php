@@ -31,17 +31,22 @@
             </div>
 
             <div class="form-group">
-                <label for="patient_status">Patient status:</label>
-                <textarea name="patient_status" class="form-control" rows="5" id="patient_status"></textarea>
-            </div>
-
-            <div class="form-group">
                 <label for="client_name">Client name:</label>
                 <select name="client_id">
                     <?php foreach ($clientdata as $personen){  ?>
                         <option  value="<?php echo $personen['client_id']; ?>"><?php echo $personen['client_firstname']; ?></option>
                     <?php } ?>
                 </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                        <div class="radio">
+                            <label><input type="radio" value="male" name="gender">Male:</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" value="female" name="gender">Female:</label>
+                        </div>
             </div>
 
             <input type="submit" class="btn btn-primary" name="submit" value="submit">
