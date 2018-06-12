@@ -10,7 +10,6 @@
         {
             $dbdata = array();
             $this->db->from('clients');
-            $this->db->order_by('client_firstname', 'client_lastname');
             $this->db->select('*');
             $query = $this->db->get();
             if ($query->num_rows()) {
@@ -19,6 +18,8 @@
                         'client_id' => $row['client_id'],
                         'client_firstname' => $row['client_firstname'],
                         'client_lastname' => $row['client_lastname'],
+                        'client_email' => $row['client_email'],
+                        'client_number' => $row['client_number']
                     );
                 }
             }

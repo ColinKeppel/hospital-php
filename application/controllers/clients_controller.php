@@ -16,10 +16,14 @@ class clients_controller extends CI_Controller
         if (!empty($_POST)) {
             $client_firstname = $this->input->post('clientfirstname');
             $client_lastname = $this->input->post('clientlastname');
+            $client_email = $this->input->post('client_email');
+            $client_number = $this->input->post('client_number');
             if ($client_firstname && $client_lastname) {
                 $data = array(
                     'client_firstname' => $client_firstname,
-                    'client_lastname' => $client_lastname
+                    'client_lastname' => $client_lastname,
+                    'client_email' => $client_email,
+                    'client_number' => $client_number
                 );
             }
             $this->load->model('clients_model');
@@ -40,6 +44,8 @@ class clients_controller extends CI_Controller
             $data = array(
                 'client_firstname' => $this->input->post('clientfirstname'),
                 'client_lastname' => $this->input->post('clientlastname'),
+                'client_email' => $this->input->post('client_email'),
+                'client_number' => $this->input->post('client_number')
         );
             $this->clients_model->update_client_id($id,$data);
             redirect('clients_controller/index');

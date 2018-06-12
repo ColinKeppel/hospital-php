@@ -2,12 +2,14 @@
 
 class patients_controller extends CI_Controller
 {
+
+
     public function index()
     {
         $this->load->model('patients_model');
         $data['patientsdata'] = $this->patients_model->read();
         $this->load->view('patients/patients', $data);
-        $data['species'] = $this->species_model->read();
+        //$data['species'] = $this->species_model->read();
     }
 
     public function create_patients()

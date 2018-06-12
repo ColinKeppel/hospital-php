@@ -22,6 +22,17 @@ foreach($id as $result):
                 <label for="clientlastname">Client lastname:</label>
                 <input type="text" class="form-control" name="clientlastname" value="<?php echo $result['client_lastname']; ?>">
             </div>
+
+            <div class="form-group">
+                <label for="client_emails">Client email:</label>
+                <input type="text" class="form-control" name="client_email" value="<?php echo $result['client_email']; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="client_number">Client number:</label>
+                <input type="text" class="form-control" name="client_number" value="<?php echo $result['client_number']; ?>">
+            </div>
+
             <input type="submit" class="btn btn-primary" name="sumbit" value="update">
 
         </form>

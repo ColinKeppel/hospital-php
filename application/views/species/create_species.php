@@ -14,10 +14,10 @@
             <h1>Species aanmaken</h1>
             <div class="form-group">
                 <label for="speciesdescription">Species description :</label>
-                <input type="text" name="speciesdescription" class="form-control" placeholder="Species description">
+                <input type="text" name="speciesdescription" class="form-control" placeholder="Species description" required>
             </div>
 
-            <input type="submit" class="btn btn-primary" name="submit" value="submit">
+            <input type="submit" class="btn btn-primary" name="submit" value="submit" required>
 
         </form>
 
