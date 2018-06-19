@@ -29,7 +29,7 @@
 
             <div class="form-group">
                 <label for="client_number">Client number:</label>
-                <input type="text" name="client_number" class="form-control" placeholder="Client number" minlength="10" required>
+                <input type="number" name="client_number" class="form-control" placeholder="Client number" min="1000000000" required>
             </div>
 
             <input type="submit" class="btn btn-primary" name="submit" value="submit">

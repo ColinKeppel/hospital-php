@@ -54,7 +54,16 @@ class clients_controller extends CI_Controller
     public function delete($id)
     {
         $this->load->model('clients_model');
-        $this->clients_model->delete($id);
-        redirect('clients_controller/index');
+        $result = $this->clients_model->delete($id);
+
+        if ( $result == false ) {
+            // er is iets foutgegaan; de error zit in de sessionc
+            redirect('clients_controller/index');
+
+        } else {
+            redirect('clients_controller/index');
+        }
+
+
     }
 }

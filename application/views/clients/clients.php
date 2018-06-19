@@ -14,6 +14,13 @@
     <li><a href="<?php echo base_url("species_controller/index")?>">Species</a></li>
 </ul>
 
+<?php if(($this->session->flashdata('error'))) { ?>
+<div class="alert alert-danger">
+    <?php echo $this->session->flashdata('error'); ?>
+</div>
+<?php } ?>
+
+
 <h2>Clients</h2>
 <table>
     <thead>

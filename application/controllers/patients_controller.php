@@ -17,7 +17,6 @@ class patients_controller extends CI_Controller
         $this->load->model('patients_model');
         $this->load->model('species_model');
         $this->load->model('clients_model');
-        $data['patientsdata'] = $this->patients_model->read();
         $data['speciesdata'] = $this->species_model->read();
         $data['clientdata'] = $this->clients_model->read();
 

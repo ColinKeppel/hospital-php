@@ -10,7 +10,7 @@
 <div class="container">
     <div class="col-sm-6">
 
-        <form action="<?php echo base_url("patients_controller/create_patients/")?>" method="post">
+        <form action="<?php echo base_url("patients_controller/create_patients/")?>" method="post" class="was-validated">
             <h1>Create patient</h1>
             <div class="form-group">
                 <label for="patient_name">Patient name:</label>
@@ -45,7 +45,7 @@
                             <label><input required type="radio" value="male" name="gender">Male:</label>
                         </div>
                         <div class="radio">
-                            <label><input required type="radio" value="female" name="gender">Female:</label>
+                            <label><input required type="radio" value="female" name="gender" >Female:</label>
                         </div>
             </div>
 

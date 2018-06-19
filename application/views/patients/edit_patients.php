@@ -9,7 +9,7 @@
 
 <div class="container">
     <div class="col-sm-6">
-        <form action="<?php echo base_url("patients_controller/update/")?>" method="post">
+        <form action="<?php echo base_url("patients_controller/update/")?>" method="post" class="was-validated">
             <h1>Edit patient</h1>
             <div class="form-group">
                 <label for="patient_name">Client firstname:</label>
@@ -38,6 +38,17 @@
                     <?php } ?>
                 </select>
             </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <div class="radio">
+                    <label><input <?php echo ($patient['gender'] == "male" ? "checked" : ""); ?> required type="radio" name="gender" value="male">Male</label>
+                </div>
+                <div class="radio">
+                    <label><input <?php echo ($patient['gender'] == "female" ? "checked" : ""); ?> required type="radio" name="gender" value="female">Female</label>
+                </div>
+            </div>
+
                     <input type="hidden" name="id" value="<?php echo $patient['patient_id']; ?>">
             <input type="submit" class="btn btn-primary" name="submit" value="submit">
         </form>

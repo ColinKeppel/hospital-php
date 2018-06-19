@@ -11,7 +11,7 @@ foreach($id as $result):
     ?>
     <div class="container">
         <h2>Edit species</h2>
-        <form action="<?php echo base_url('species_controller/update') ?>" method="post">
+        <form action="<?php echo base_url('species_controller/update') ?>" method="post" class="was-validated">
             <input type="hidden" name="id" value="<?php echo $result['species_id']; ?>">
             <div class="form-group">
                 <label for="species_description">Species description :</label>

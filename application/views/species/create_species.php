@@ -10,7 +10,7 @@
 <div class="container">
     <div class="col-sm-6">
 
-        <form action="<?php echo base_url("species_controller/create_species/")?>" method="post">
+        <form action="<?php echo base_url("species_controller/create_species/")?>" method="post" class="was-validated">
             <h1>Species aanmaken</h1>
             <div class="form-group">
                 <label for="speciesdescription">Species description :</label>

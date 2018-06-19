@@ -38,7 +38,6 @@
     </tbody>
     <?php endforeach; ?>
 </table>
-<?php var_dump($value); ?>
 <p><a href="<?php echo base_url("patients_controller/create_patients/") ?>">Create</a></p>
 <p><a href="<?php echo base_url("patients_controller/index")?>">Home</a></p>
 </body>

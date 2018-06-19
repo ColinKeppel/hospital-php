@@ -48,6 +48,11 @@
         public function delete($id)
         {
             $this->db->where('client_id', $id);
-            $this->db->delete('clients');
+            if (! $this->db->delete('clients') ) {
+                //echo $this->db->error();
+                $this->session->set_flashdata('error', 'Kon het record niet verwijderen; mogelijk zijn er nog patient records voor deze client');
+                return false;
+            }
+            return true;
         }
     }
